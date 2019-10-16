@@ -1,0 +1,75 @@
+<!-- <ion-header> -->
+<!-- <ion-navbar> -->
+<!-- <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref=""></ion-back-button>
+        </ion-buttons>
+        <ion-title class="title" style="margin-right:50px;">UZ App Login</ion-title>
+    </ion-toolbar> -->
+<!-- </ion-navbar> -->
+<!-- </ion-header> -->
+
+
+<ion-content padding class="animated fadeIn login auth-page">
+    <div class="login-content">
+
+
+
+        <!-- Logo -->
+        <div padding-horizontal text-center class="animated fadeInDown" style="padding-top: 15%;">
+            <!-- <div class="logo"></div> -->
+            <div>
+                <ion-thumbnail class="you">
+                    <ion-img src="../../../assets/imgs/logo.png"></ion-img>
+                </ion-thumbnail>
+            </div>
+            <!-- <h2 ion-text class="text-warning">
+                <strong>UZBuddie</strong>
+            </h2> -->
+        </div>
+
+
+
+        <form class="list-form">
+
+            <ion-item>
+                <ion-label position="floating" style="color: #2A1770;">
+                    <ion-icon name="person" item-start class="text-warning"></ion-icon>
+                    EC number / Reg number
+                </ion-label>
+                <ion-input type="text" [(ngModel)]="user.username" name="username"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating" style="color:#2A1770;">
+                    <ion-icon name="lock" item-start class="text-warning"></ion-icon>
+                    Barcode
+                </ion-label>
+                <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+            </ion-item>
+
+        </form>
+        <p text-right>
+            <ion-text text-right color="primary" tappable end>
+                <strong>Forgot Password?</strong>
+            </ion-text>
+        </p>
+
+        <div margin-top>
+            <ion-button class="shary" shape="round" icon-start expand="block" color="warning" tappable (click)="login()">
+                <ion-icon name="log-in"></ion-icon>
+                Log in
+            </ion-button>
+
+
+        </div><br>
+
+        <!-- Other links -->
+        <div text-center margin-top>
+            <span tappable (click)="guest();">
+                    <ion-text color="primary">Guest account? <strong style="color: #E78923">Login here</strong></ion-text>
+                </span>
+        </div>
+
+    </div>
+</ion-content>

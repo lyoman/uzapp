@@ -1,0 +1,7 @@
+{
+  "name": "uzapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
