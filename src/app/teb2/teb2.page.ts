@@ -21,35 +21,18 @@ export class Teb2Page implements OnInit {
       const token = JSON.parse(localStorage.getItem('token'));
       this.token = token;
       console.log('token again', this.token);
-
-      // this.allusers();
 }
 
   ngOnInit() {
   }
 
-  hey = "data";
-
-  // allusers(){
-  //   // data = this.hey;
-  //   this.authService.allusers(this.token, this.hey).subscribe(resonse =>{ 
-  //     this.users = resonse;
-  //     console.log('users', this.users);
-  //     localStorage.setItem('user', JSON.stringify(this.users[0]));
-  //     console.log('me', this.users[0]);
-  //     this.response = this.users[0]['username']
-  //     this.response1 = this.users[0]['is_staff']
-  //     localStorage.setItem('status', JSON.stringify(this.response1));
-
-  //     localStorage.setItem('username', JSON.stringify(this.response));
-      
-    
-  //   });
-  // }
-
 
   news(){
     this.router.navigateByUrl('newslist');
+  }
+
+  clinic(){
+    this.router.navigateByUrl('clinic');
   }
 
   ambulance(){

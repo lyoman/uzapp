@@ -1,0 +1,109 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="tebs/teb3"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="title">
+            Catering
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <ion-searchbar placeholder="Filter Meals, Restaurants" [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" style="color: #625e59"></ion-searchbar>
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col size="4">
+                <ion-thumbnail style="margin: auto;">
+                    <img src="../../../assets/icon/png/dinner.png">
+                </ion-thumbnail><br>
+                <ion-label style="margin: auto;">
+                    <h2 style="text-align: center;">Restaurants</h2>
+                </ion-label>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-thumbnail style="margin: auto;">
+                    <img src="../../../assets/icon/png/heart (1).png">
+                </ion-thumbnail><br>
+                <ion-label style="margin: auto;">
+                    <h2 style="text-align: center;">Favourites</h2>
+                </ion-label>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-thumbnail style="margin: auto;">
+                    <img src="../../../assets/icon/png/star.png">
+                </ion-thumbnail><br>
+                <ion-label style="margin: auto;">
+                    <h2 style="text-align: center;">On Offer</h2>
+                </ion-label>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+
+    <h1 style="font-style: italic;font-weight: bold;">Quick Deli</h1>
+
+
+
+    <div *ngIf="searchTerm!=''">
+        <ion-list>
+            <ion-item *ngFor="let user of meal" tappable (click)="mealDetails(user);">
+
+                <ion-avatar slot="start" style="margin: auto;align-self: auto;width: 17%;height: 20%;">
+                    <img src="../../../assets/icon/png/shopping-cart (3).png" style="width: 40px;height: auto;">
+                </ion-avatar><br>
+                <hr>
+
+                <ion-label style="margin-left: 5px;;">
+                    <h1>{{ user.name }}</h1>
+
+                    <h2 style="white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;">{{ user.restaurant.name }}</h2>
+
+                    <h3>$ {{ user.price }}</h3>
+                </ion-label>
+                <ion-buttons slot="end">
+                    <ion-button size="small" fill="solid" color="primary" tappable style="font-style: italic;width: 90px;">
+                        Add Cart
+                    </ion-button>
+                </ion-buttons>
+
+            </ion-item>
+        </ion-list>
+    </div>
+    <div *ngIf="searchTerm==''">
+        <ion-list>
+            <ion-item *ngFor="let user of meals" tappable (click)="mealDetails(user);">
+
+                <ion-avatar slot="start" style="margin: auto;align-self: auto;width: 17%;height: 20%;">
+                    <img src="../../../assets/icon/png/shopping-cart (3).png" style="width: 40px;height: auto;">
+                </ion-avatar><br>
+                <hr>
+
+                <ion-label style="margin-left: 5px;;">
+                    <h1>{{ user.name }}</h1>
+
+                    <h2 style="white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;">{{ user.restaurant.name }}</h2>
+
+                    <h3>$ {{ user.price }}</h3>
+                </ion-label>
+                <ion-buttons slot="end">
+                    <ion-button size="small" fill="solid" color="primary" tappable style="font-style: italic;width: 90px;">
+                        Add Cart
+                    </ion-button>
+                </ion-buttons>
+
+            </ion-item>
+        </ion-list>
+    </div>
+
+</ion-content>

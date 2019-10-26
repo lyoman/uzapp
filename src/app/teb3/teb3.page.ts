@@ -31,20 +31,16 @@ export class Teb3Page implements OnInit {
    }
 
    ngOnInit() {
-    // this.plt.ready().then(() => {
-    //   this.loadData(true);
-    // })
+   
   }
-// hey = "leo"
-//   loadData(data,refresh = false, refresher?) {  
-//     data = this.hey;
-//     this.apiService.allusers(this.token, data).subscribe(res => {
-//       this.users = res;
-//       console.log('data', this.users)
-//       if (refresher) {
-//         refresher.target.complete();
-//       }
-//     })
-//   }
+
+  catering(){
+    this.router.navigateByUrl('meals');
+  }
+
+  
+  clinic(){
+    this.router.navigateByUrl('clinic');
+  }
 
 }

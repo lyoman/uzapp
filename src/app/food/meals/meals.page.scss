@@ -1,0 +1,29 @@
+ion-icon {
+    color: #2A1770;
+}
+
+ion-avatar {
+    background-color: rgb(110, 116, 103);
+}
+
+ion-content {
+    --background: none;
+    background-image: url('../../../assets/imgs/bg.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ion-item {
+    --ion-background-color: rgb(139, 190, 233);
+    margin-top: 10px;
+}
+
+.space {
+    border: 10px solid green;
+    border-radius: 5px;
+}
+
+ion-thumbnail {
+    text-align: center;
+}

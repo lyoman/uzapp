@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="clinic"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="title">
+            Request Ambulance
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+    <div>
+        <ion-thumbnail padding>
+            <ion-img src="../../../assets/icon/png/ambulance.png"></ion-img>
+        </ion-thumbnail>
+        <hr>
+
+        <h2 style="color:#2A1770;" text-center>Campus Ambulance Request</h2>
+
+        <form class="list-form">
+
+            <ion-item>
+                <ion-label position="floating" style="color:#2A1770;">
+                    <ion-icon name="md-medkit" item-start class="text-primary"></ion-icon>
+                    Problem description
+                </ion-label>
+                <ion-textarea type="text" [(ngModel)]="problem" name="problem" required></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating" style="color:#2A1770;">
+                    <ion-icon name="pin" item-start class="text-primary"></ion-icon>
+                    Location
+                </ion-label>
+                <ion-input type="text" [(ngModel)]="location" name="location" required></ion-input>
+            </ion-item>
+
+        </form>
+
+        <div margin-top>
+            <ion-button icon-start expand="block" color="primary" tappable (click)="requestAmbulance()">
+                Submit
+            </ion-button>
+
+        </div>
+
+    </div>
+
+
+</ion-content>

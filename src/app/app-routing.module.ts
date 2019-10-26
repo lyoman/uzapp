@@ -11,6 +11,11 @@ const routes: Routes = [
   { path: 'teb3', loadChildren: './teb3/teb3.module#Teb3PageModule' },
   { path: 'guest', loadChildren: './auth/guest/guest.module#GuestPageModule' },
   { path: 'calendar', loadChildren: './events/calendar/calendar.module#CalendarPageModule' },
+  { path: 'meals', loadChildren: './food/meals/meals.module#MealsPageModule' },
+  { path: 'order', loadChildren: './food/order/order.module#OrderPageModule' },
+  { path: 'clinic', loadChildren: './clinic/clinic/clinic.module#ClinicPageModule' },
+  { path: 'ambulance', loadChildren: './clinic/ambulance/ambulance.module#AmbulancePageModule' },
+  { path: 'drugsearch', loadChildren: './clinic/drugsearch/drugsearch.module#DrugsearchPageModule' },
 ];
 
 @NgModule({

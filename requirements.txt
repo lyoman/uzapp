@@ -1,0 +1,10 @@
+npm install @ionic/storage @ionic-native/network@beta
+ionic cordova plugin add cordova-sqlite-storage
+ionic cordova plugin add cordova-plugin-network-information
+npm i jwt-decode
+ionic cordova plugin add cordova-plugin-x-socialsharing
+npm install @ionic-native/social-sharing
+ionic cordova plugin add call-number
+npm install @ionic-native/call-number
+ionic cordova plugin add cordova-plugin-geolocation
+npm install @ionic-native/geolocation
