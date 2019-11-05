@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title text-center>Drug Details</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)='closeModal()'>Close</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-card>
+            <ion-card-subtitle text-center>
+                <h1 style="color: #2A1770;">{{ drug.name }}</h1>
+            </ion-card-subtitle>
+            <ion-card-content>
+
+                <ion-row>
+                    <ion-col size="4">
+                        <h2>Price</h2>
+
+                    </ion-col>
+                    <ion-col size="8">
+                        <h2>: {{ drug.price }}</h2>
+                    </ion-col>
+                </ion-row>
+
+
+                <ion-grid>
+
+                    <ion-row>
+                        <ion-col size="4">
+                            <h2>Status</h2>
+
+                        </ion-col>
+                        <ion-col size="8">
+                            <h2>: {{ drug.status }}</h2>
+                        </ion-col>
+                    </ion-row>
+
+
+
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+
+</ion-content>

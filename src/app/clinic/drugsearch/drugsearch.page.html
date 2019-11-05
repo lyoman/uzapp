@@ -12,4 +12,69 @@
 
 <ion-content class="ion-padding">
 
+    <ion-searchbar placeholder="Filter drugs on campus" [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" style="color: #625e59"></ion-searchbar>
+
+
+
+    <div *ngIf="searchTerm!=''">
+        <ion-list>
+            <ion-item *ngFor="let user of drug" tappable (click)="drugDetails(user);">
+
+                <ion-thumbnail slot="start" style="margin: auto;align-self: auto;width: 15%;height: auto;">
+                    <img src="../../../assets/icon/png/drugs (2).png">
+                </ion-thumbnail><br>
+                <hr>
+
+                <ion-label style="margin-left: 10px;;">
+                    <h1>{{ user.name }}</h1>
+
+                    <h2 style="white-space: nowrap;
+                                      overflow: hidden;
+                                      text-overflow: ellipsis;">{{ user.status }}</h2>
+
+                    <h3>$ {{ user.price }}</h3>
+                </ion-label>
+                <ion-buttons slot="end">
+                    <ion-button *ngIf="user.status == 'available'" size="small" fill="solid" color="secondary" tappable style="font-style: italic;width: 90px;">
+                        Available
+                    </ion-button>
+                    <ion-button *ngIf="user.status != 'available'" size="small" fill="solid" color="light" tappable style="font-style: italic;width: 90px;">
+                        Not Available
+                    </ion-button>
+                </ion-buttons>
+
+            </ion-item>
+        </ion-list>
+    </div>
+    <div *ngIf="searchTerm==''">
+        <ion-list>
+            <ion-item *ngFor="let user of drugs" tappable (click)="drugDetails(user);">
+
+                <ion-thumbnail slot="start" style="margin: auto;align-self: auto;width: 15%;height: auto;">
+                    <img src="../../../assets/icon/png/drugs (2).png">
+                </ion-thumbnail><br>
+                <hr>
+
+                <ion-label style="margin-left: 10px;;">
+                    <h1>{{ user.name }}</h1>
+
+                    <h2 style="white-space: nowrap;
+                              overflow: hidden;
+                              text-overflow: ellipsis;">{{ user.status }}</h2>
+
+                    <h3>$ {{ user.price }}</h3>
+                </ion-label>
+                <ion-buttons slot="end">
+                    <ion-button *ngIf="user.status == 'available'" size="small" fill="solid" color="secondary" tappable style="font-style: italic;width: 90px;">
+                        Available
+                    </ion-button>
+                    <ion-button *ngIf="user.status != 'available'" size="small" fill="solid" color="light" tappable style="font-style: italic;width: 90px;">
+                        Not Available
+                    </ion-button>
+                </ion-buttons>
+
+            </ion-item>
+        </ion-list>
+    </div>
+
 </ion-content>

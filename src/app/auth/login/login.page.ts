@@ -1,3 +1,5 @@
+import { LoadingService } from './../../services/loading.service';
+import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
@@ -16,6 +18,8 @@ export class LoginPage implements OnInit {
 
   constructor(private  router:  Router,
               public alertController: AlertController,
+              public loading: LoadingService,
+              private  authService:  AuthService, 
               
               ) { }
 
@@ -47,8 +51,30 @@ export class LoginPage implements OnInit {
       buttons: ['Dismiss']}).then(alert=> alert.present());
   }
 
-  login(){
+  login1(){
     this.router.navigateByUrl('tebs');
+  }
+
+  login(){
+    if(this.user.username == "" || this.user.password == ""){
+      this.presentAlert1();
+    }
+
+    else{
+      this.loading.presentLoading();
+      this.authService.login(this.user, '').subscribe((res)=>{
+        this.userData = res;
+        console.log('data', this.user);
+        localStorage.setItem('token', JSON.stringify(this.userData));
+        console.log('token', this.userData);
+        
+        this.router.navigateByUrl('tebs');
+      }, (err) => {
+        this.loading.dismiss();
+        this.alert();
+    });
+    }
+
   }
 
   guest(){

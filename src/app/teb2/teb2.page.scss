@@ -27,22 +27,16 @@ ion-card img {
     margin-left: 22%;
 }
 
+ion-card h3 {
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
 .special img {
     width: 80%;
     height: auto;
     margin-left: 10%;
     margin-bottom: 10%;
-}
-
-.special {
-    text-align: center;
-    align-content: center;
-    align-self: center;
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
-    transition: 0.3s;
-    margin-top: 0.8em;
-    height: 38%;
 }
 
 ion-card {

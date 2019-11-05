@@ -10,12 +10,23 @@ const routes: Routes = [
   { path: 'teb2', loadChildren: './teb2/teb2.module#Teb2PageModule' },
   { path: 'teb3', loadChildren: './teb3/teb3.module#Teb3PageModule' },
   { path: 'guest', loadChildren: './auth/guest/guest.module#GuestPageModule' },
+  { path: 'sport', loadChildren: './campusservices/sport/sport.module#SportPageModule' },
+  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'tab1', loadChildren: './tab1/tab1.module#Tab1PageModule' },
+  { path: 'tab2', loadChildren: './tab2/tab2.module#Tab2PageModule' },
+  { path: 'tab3', loadChildren: './tab3/tab3.module#Tab3PageModule' },
+  { path: 'security', loadChildren: './campusservices/security/security.module#SecurityPageModule' },
+  { path: 'contactsecurity', loadChildren: './campusservices/security/contactsecurity/contactsecurity.module#ContactsecurityPageModule' },
+  { path: 'callsecurity', loadChildren: './campusservices/security/contactsecurity/callsecurity/callsecurity.module#CallsecurityPageModule' },
+  { path: 'directory', loadChildren: './campusservices/directory/directory.module#DirectoryPageModule' },
+  { path: 'department', loadChildren: './campusservices/directory/department/department.module#DepartmentPageModule' },
   { path: 'calendar', loadChildren: './events/calendar/calendar.module#CalendarPageModule' },
   { path: 'meals', loadChildren: './food/meals/meals.module#MealsPageModule' },
   { path: 'order', loadChildren: './food/order/order.module#OrderPageModule' },
   { path: 'clinic', loadChildren: './clinic/clinic/clinic.module#ClinicPageModule' },
   { path: 'ambulance', loadChildren: './clinic/ambulance/ambulance.module#AmbulancePageModule' },
   { path: 'drugsearch', loadChildren: './clinic/drugsearch/drugsearch.module#DrugsearchPageModule' },
+  { path: 'drugdetail', loadChildren: './clinic/drugdetail/drugdetail.module#DrugdetailPageModule' },
 ];
 
 @NgModule({

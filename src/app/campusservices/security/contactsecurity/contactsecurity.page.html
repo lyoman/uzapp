@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start" color="light">
+            <ion-back-button color="light" defaultHref="security"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Contact Security</ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <hr>
+    <ion-searchbar placeholder="Filter Department" style="color: #ff8000"></ion-searchbar>
+    <hr>
+    <div>
+        <!-- <ion-list>
+            <ion-item>
+                <ion-thumbnail slot="start" style="height: auto;width: 35px;">
+                    <img src="../../../../assets/icon/png/user.png">
+                </ion-thumbnail>
+                <ion-label>
+                    <h3></h3>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-right></ion-icon>
+                <hr>
+            </ion-item>
+        </ion-list> -->
+    </div>
+    <div>
+        <ion-list>
+            <ion-item (click)="callsecurity()">
+                <ion-thumbnail slot="start" style="height: auto;width: 35px;">
+                    <img src="../../../../assets/icon/png/user.png">
+                </ion-thumbnail>
+                <ion-label>
+                    <h3>Chief Security Officer</h3>
+                    <h4>Mr A Danje</h4>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-right></ion-icon>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

@@ -3,74 +3,72 @@
         <ion-buttons slot="start">
             <ion-menu-button autoHide="false"></ion-menu-button>
         </ion-buttons>
-        <ion-title class="title" style="margin-right: 50px;" class="ion-text-center">
+        <ion-title class="title" style="margin-right: 50px;" text-center>
             Campus Services
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-grid class="ion-no-padding">
+    <ion-grid>
         <ion-row>
             <ion-col size="6">
-                <div>
-                    <ion-card class="ion-text-center ion-padding">
-                        <img src="../../assets/icon/png/012-calendar.png">
-                        <h3>Calendar</h3>
-                    </ion-card>
-                </div>
+                <ion-card padding (click)="calendar()">
+                    <img src="../../assets/icon/png/012-calendar.png">
+                    <h3>Calendar</h3>
+                </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding" (click)="catering();">
+                <ion-card padding (click)="catering()">
                     <img src="../../assets/icon/png/015-dinner.png">
                     <h3>Catering</h3>
                 </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding">
+                <ion-card padding>
                     <img src="../../assets/icon/png/017-parliament.png">
                     <h3>Halls</h3>
                 </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding">
-                    <img src="../../assets/icon/png/009-research.png">
+                <ion-card padding>
+                    <img src="../../assets/icon/png/map-location.png">
                     <h3>Map</h3>
                 </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding">
+                <ion-card padding (click)="sport()">
                     <img src="../../assets/icon/png/020-sport.png">
                     <h3>Sports</h3>
                 </ion-card>
             </ion-col>
             <ion-col size="6">
 
-                <ion-card class="ion-padding" (click)="clinic();">
-                    <img src="../../assets/icon/png/013-urban.png">
+                <ion-card padding (click)="clinic();">
+                    <img src="../../assets/icon/png/hospital.png">
                     <h3>Clinic</h3>
                 </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding">
+                <ion-card padding>
                     <img src="../../assets/icon/png/016-bank.png">
                     <h3>Financial</h3>
                 </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding">
+                <ion-card padding>
                     <img src="../../assets/icon/png/018-laptop.png">
                     <h3>Laptops</h3>
                 </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding">
+                <ion-card padding (click)="directory()">
                     <img src="../../assets/icon/png/006-directory.png">
                     <h3>Phone</h3>
                 </ion-card>
                 <hr>
 
-                <ion-card class="ion-padding">
+                <ion-card padding (click)="security()">
                     <img src="../../assets/icon/png/021-policeman.png">
                     <h3>Security</h3>
                 </ion-card>

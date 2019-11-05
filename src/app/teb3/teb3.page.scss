@@ -33,6 +33,11 @@ ion-card {
     margin-top: 0.8em;
 }
 
+ion-card h3 {
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
 ion-content {
     --background: none;
     background-image: url('../../assets/imgs/bg.jpg');

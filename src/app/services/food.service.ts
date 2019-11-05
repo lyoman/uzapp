@@ -75,31 +75,10 @@ export class FoodService {
     }
   }
 
-
-  getOneMeal(id, data): Observable<any> {
-    // id = id - 1;
-    let url = `${API_URL}/restaurants/meals/?id=` + id;
-
-    if (this.networkService.getCurrentNetworkStatus() == ConnectionStatus.Offline) {
-      // return from(this.offlineManager.storeRequest(url, 'GET', data));
-      return from(this.getLocalData('meals'+id));
-    } else {
-      return this.http.get(url, data).pipe(
-        map(res => res),
-        tap(res => {
-          console.log('returns real live API data');
-          this.setLocalData('meals'+id, res);
-          console.log(res);
-          console.log('offline data', this.getLocalData('meals'+id));
-          // throw new Error(err);
-          // catchError(err => {
-          //   this.offlineManager.storeRequest(url, 'GET', data);
-          //   throw new Error(err);
-          // })
-        })
-      );
-    }
+  getOfflineMeals(){
+    return from(this.getLocalData('meals'));
   }
+
 
   getRestaurants(forceRefresh: boolean = false): Observable<any> {
     if (this.networkService.getCurrentNetworkStatus() == ConnectionStatus.Offline || !forceRefresh) {

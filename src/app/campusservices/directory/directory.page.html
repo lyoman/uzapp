@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="title" style="margin-right: 50px;" text-center>
+            Campus Directory
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <hr>
+    <ion-searchbar placeholder="Filter Faculty" style="color: #ff8000"></ion-searchbar>
+    <hr>
+    <div>
+        <ion-list>
+            <ion-item>
+                <ion-thumbnail slot="start" style="height: auto;width: 35px;">
+                    <img src="../../../assets/icon/png/phone-book.png">
+                </ion-thumbnail>
+                <ion-label>
+                    <h3>Faculty</h3>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-right></ion-icon>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </div>
+    <div>
+        <ion-list>
+            <ion-item (click)="departments()">
+                <ion-thumbnail slot="start" style="height: auto;width: 35px;">
+                    <img src="../../../assets/icon/png/phone-book.png">
+                </ion-thumbnail>
+                <ion-label>
+                    <h3>Faculty of Science</h3>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-right></ion-icon>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

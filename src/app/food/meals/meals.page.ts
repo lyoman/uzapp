@@ -1,7 +1,7 @@
 import { NagivateDataService } from './../../services/nagivate-data.service';
 import { FoodService } from './../../services/food.service';
 import { Component, OnInit } from '@angular/core';
-import { Platform, NavController } from '@ionic/angular';
+import { Platform, NavController, ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,6 +17,7 @@ export class MealsPage implements OnInit {
 
   constructor(private foodService: FoodService, 
               private navigateData: NagivateDataService,
+              private toastController: ToastController,
               private plt: Platform,
               private navCtrl: NavController,
               private router: Router,) { }
@@ -35,8 +36,28 @@ export class MealsPage implements OnInit {
                   if (refresher) {
                     refresher.target.complete();
                   }
-                })
-              }
+                }, (err) => {
+   
+                  console.log('error', err)
+                  
+                  let toast = this.toastController.create({
+                    message: `You are now Offline`,
+                    duration: 3000,
+                    position: 'bottom'
+                  });
+                  toast.then(toast => toast.present());
+          
+                  this.foodService.getOfflineMeals().subscribe(res => {
+                
+                    this.meals = res;
+                    this.meal = res;
+                    
+                    if (refresher) {
+                      refresher.target.complete();
+                    }
+                  });
+            })
+      }
             
             
               filterItems(searchTerm) {

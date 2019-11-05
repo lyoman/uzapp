@@ -1,3 +1,6 @@
+import { AuthModule } from './auth/auth.module';
+import { DrugdetailPageModule } from './clinic/drugdetail/drugdetail.module';
+// import { DrugdetailPage } from './clinic/drugdetail/drugdetail.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -23,11 +26,14 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
             IonicStorageModule.forRoot(),
             HttpClientModule,
+            DrugdetailPageModule,
+            AuthModule,
           ],
   providers: [
     StatusBar,
     SplashScreen,
     Network,
+    // DrugdetailPage,
     LoadingService,
     Geolocation, 
     CallNumber,
